@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8EA7278F-3730-4BFD-9019-D2917288260B}</ProjectGuid>
+    <RootNamespace>libhmodel</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\CoreLib\OpenNI2\Include;F:\CoreLib\opencv\2.4.11\windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;$(SolutionDir)/3rd/include;$(SolutionDir)/src;$(SolutionDir)/3rd/include/QtCore;$(SolutionDir)/3rd/include\QtWidgets;$(SolutionDir)/3rd/include\QtGui;$(SolutionDir)/3rd/include\QtOpenGL;$(SolutionDir)/3rd/include\QtXml;$(SolutionDir)/src\tracker\OpenGL;$(SolutionDir)/src\tracker\OpenGL\DebugRenderer;$(SolutionDir)/src\tracker\OpenGL\CylindersRenderer;$(SolutionDir)/src\tracker\OpenGL\QuadRenderer;$(SolutionDir)/src\tracker\OpenGL\KinectDataRenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WITH_OPENCV;_CRT_SECURE_NO_WARNINGS;WITH_CUDA;WITH_ANTTWEAKBAR;GLM_FORCE_CUDA;WITH_OPENNI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\CoreLib\OpenNI2\Include;F:\CoreLib\opencv\2.4.11\windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;$(SolutionDir)/3rd/include;$(SolutionDir)/src;$(SolutionDir)/3rd/include/QtCore;$(SolutionDir)/3rd/include\QtWidgets;$(SolutionDir)/3rd/include\QtGui;$(SolutionDir)/3rd/include\QtOpenGL;$(SolutionDir)/3rd/include\QtXml;$(SolutionDir)/src\tracker\OpenGL;$(SolutionDir)/src\tracker\OpenGL\DebugRenderer;$(SolutionDir)/src\tracker\OpenGL\CylindersRenderer;$(SolutionDir)/src\tracker\OpenGL\QuadRenderer;$(SolutionDir)/src\tracker\OpenGL\KinectDataRenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WITH_OPENCV;_CRT_SECURE_NO_WARNINGS;WITH_CUDA;WITH_ANTTWEAKBAR;GLM_FORCE_CUDA;WITH_OPENNI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\tracker\DataStructure\CustomJointInfo.h" />
+    <ClInclude Include="..\src\tracker\Data\Camera.h" />
+    <ClInclude Include="..\src\tracker\Data\DataFrame.h" />
+    <ClInclude Include="..\src\tracker\Data\DataStream.h" />
+    <ClInclude Include="..\src\tracker\Data\SolutionStream.h" />
+    <ClInclude Include="..\src\tracker\Data\TextureColor8UC3.h" />
+    <ClInclude Include="..\src\tracker\Data\TextureDepth16UC1.h" />
+    <ClInclude Include="..\src\tracker\Detection\DetectionStream.h" />
+    <ClInclude Include="..\src\tracker\Detection\FindFingers.h" />
+    <ClInclude Include="..\src\tracker\Detection\matlab_helpers.h" />
+    <ClInclude Include="..\src\tracker\Detection\QianDetection.h" />
+    <ClInclude Include="..\src\tracker\Detection\TrivialDetector.h" />
+    <ClInclude Include="..\src\tracker\Energy\Collision.h" />
+    <ClInclude Include="..\src\tracker\Energy\Damping.h" />
+    <ClInclude Include="..\src\tracker\Energy\Energy.h" />
+    <ClInclude Include="..\src\tracker\Energy\Fitting.h" />
+    <ClInclude Include="..\src\tracker\Energy\Fitting\DistanceTransform.h" />
+    <ClInclude Include="..\src\tracker\Energy\Fitting\OnlinePerformanceMetrics.h" />
+    <ClInclude Include="..\src\tracker\Energy\Fitting\Settings.h" />
+    <ClInclude Include="..\src\tracker\Energy\Fitting\TrackingMonitor.h" />
+    <ClInclude Include="..\src\tracker\Energy\JointLimits.h" />
+    <ClInclude Include="..\src\tracker\Energy\PoseSpace.h" />
+    <ClInclude Include="..\src\tracker\Energy\Temporal.h" />
+    <ClInclude Include="..\src\tracker\ForwardDeclarations.h" />
+    <ClInclude Include="..\src\tracker\GLWidget.h" />
+    <ClInclude Include="..\src\tracker\HandFinder\connectedComponents.h" />
+    <ClInclude Include="..\src\tracker\HandFinder\HandFinder.h" />
+    <ClInclude Include="..\src\tracker\HModel\DataLoader.h" />
+    <ClInclude Include="..\src\tracker\HModel\GeometryHelpers.h" />
+    <ClInclude Include="..\src\tracker\HModel\Model.h" />
+    <ClInclude Include="..\src\tracker\HModel\ModelSemantics.h" />
+    <ClInclude Include="..\src\tracker\HModel\ModelSerializer.h" />
+    <ClInclude Include="..\src\tracker\HModel\OutlineFinder.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\ConvolutionRenderer\ConvolutionRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\CustomFrameBuffer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\DebugRenderer\ArcRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\DebugRenderer\DebugRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\DebugRenderer\PointRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\DebugRenderer\SegmentRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\GeometricPrimitiveRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\KinectDataRenderer\KinectDataRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\ObjectRenderer.h" />
+    <ClInclude Include="..\src\tracker\OpenGL\OffscreenRenderer.h" />
+    <ClInclude Include="..\src\tracker\Sensor\Sensor.h" />
+    <ClInclude Include="..\src\tracker\Tracker.h" />
+    <ClInclude Include="..\src\tracker\TwSettings.h" />
+    <ClInclude Include="..\src\tracker\Types.h" />
+    <ClInclude Include="..\src\tracker\Worker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\tracker\Data\Camera.cpp" />
+    <ClCompile Include="..\src\tracker\Data\DataStream.cpp" />
+    <ClCompile Include="..\src\tracker\Detection\FindFingers.cpp" />
+    <ClCompile Include="..\src\tracker\Detection\QianDetection.cpp" />
+    <ClCompile Include="..\src\tracker\Detection\TrivialDetector.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\Collision.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\Damping.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\Energy.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\Fitting.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\JointLimits.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\PoseSpace.cpp" />
+    <ClCompile Include="..\src\tracker\Energy\Temporal.cpp" />
+    <ClCompile Include="..\src\tracker\GLWidget.cpp" />
+    <ClCompile Include="..\src\tracker\HandFinder\connectedComponents.cpp" />
+    <ClCompile Include="..\src\tracker\HandFinder\HandFinder.cpp" />
+    <ClCompile Include="..\src\tracker\HModel\Model.cpp" />
+    <ClCompile Include="..\src\tracker\HModel\ModelSemantics.cpp" />
+    <ClCompile Include="..\src\tracker\HModel\ModelSerializer.cpp" />
+    <ClCompile Include="..\src\tracker\HModel\OutlineFinder.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\ConvolutionRenderer\ConvolutionRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\CustomFrameBuffer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\DebugRenderer\ArcRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\DebugRenderer\DebugRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\DebugRenderer\PointRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\DebugRenderer\SegmentRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\GeometricPrimitiveRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\KinectDataRenderer\KinectDataRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\ObjectRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\OpenGL\OffscreenRenderer.cpp" />
+    <ClCompile Include="..\src\tracker\Sensor\Sensor_openni.cpp" />
+    <ClCompile Include="..\src\tracker\Sensor\Sensor_realsense.cpp" />
+    <ClCompile Include="..\src\tracker\Sensor\Sensor_softkin.cpp" />
+    <ClCompile Include="..\src\tracker\TwSettings.cpp" />
+    <ClCompile Include="..\src\tracker\Worker.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
